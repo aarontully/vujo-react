@@ -1,0 +1,90 @@
+$width: 250px;
+
+.nav {
+    grid-area: nav;
+    background-color: $primary-dark;
+    color: $primary-dark-text;
+    width: $width;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease-in-out;
+
+    &.nav-minimized {
+        width: 50px;
+
+        .nb:not(.iconButton){
+            display: none;
+        }
+    }
+
+    & .widthControllerContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto !important;
+        align-items: flex-end;
+
+        & .widthController {
+            margin-right: -17px;
+            padding: .5rem !important;
+            background-color: $primary-dark;
+            border: .5px solid darkslategrey;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+.lightIcon {
+    color: $primary-light !important;
+}
+
+.MuiList-root {
+    padding: 0 !important;
+}
+
+.MuiIconButton-root {
+    padding: 0 !important;
+}
+
+.navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+        background-color: $hover;
+
+        & .addIcon {
+            display: flex !important;
+        }
+    }
+
+    & .navTopTitle {
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+    }
+
+    & .navTitle {
+        padding-left: .8rem;
+    }
+}
+
+.addIcon {
+    display: none !important;
+}
+
+.selectedNb {
+    background-color: lighten($primary-dark, 50%) !important;
+    color: $primary-dark !important;
+}
+
+.nb {
+    border: 2px solid transparent !important;
+
+    &:hover {
+        & .addIcon {
+            display: flex !important;
+        }
+    }
+}

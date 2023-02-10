@@ -1,0 +1,39 @@
+@import "colours";
+@import "navbar";
+@import "pagesNav";
+@import "main";
+@import "header";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard */
+    font-family: inherit !important;
+}
+
+html {
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 16px;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: auto 250px 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "header header header" "nav pagesnav main" "nav pagesnav main";
+    height: 100vh;
+}
+
+.iconButton {
+    cursor: pointer;
+}

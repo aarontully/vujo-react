@@ -1,0 +1,16 @@
+.header {
+    grid-area: header;
+    background-color: lighten($primary-dark, 85%);
+    height: 24px;
+
+    & .word-details {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 100%;
+
+        div {
+            margin-right: 1rem;
+        }
+    }
+}

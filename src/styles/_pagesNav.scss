@@ -1,0 +1,37 @@
+.pagesnav {
+    grid-area: pagesnav;
+    background-color: lighten($primary-dark, 85%);
+    width: var(--nav-width);
+
+    & .page-list-bottom {
+        display: flex;
+        justify-content: space-between;
+        width: -webkit-fill-available;
+        align-items: flex-end;
+
+        p {
+            font-size: .8rem !important;
+            color: darken($primary-dark-text, 30%);
+        }
+    }
+}
+
+.page {
+    min-height: 110px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    border: 2px solid transparent !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+
+    & .pageDate {
+        font-size: .8rem !important;
+    }
+
+    &.selected {
+        border: 2px solid lightgreen !important;
+    }
+}
